@@ -1,0 +1,584 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+:root {
+    --orange: #ff7800;
+    --black: #130f40;
+    --light-color: #666;
+    --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    --border: 0.2rem solid rgba(0, 0, 0, 0.1);
+    --outline: 0.1rem solid rgba(0, 0, 0, 0.1);
+    --outline-hover: 0.2rem solid var(--black);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+#search {
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+    font-size: 16px;
+    margin: -20px;
+    width: 220px;
+}
+
+#search:focus {
+    outline: none;
+}
+
+nav label {
+    color: white;
+    font-size: 18px;
+}
+
+
+/* Set global font */
+
+
+/* Global Styles */
+
+body {
+    background-color: #f2f2f2;
+}
+
+
+/* Navigation Styles */
+
+#nav {
+    background-color: #333;
+    color: white;
+    height: 60px;
+}
+
+.nav__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70%;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 0 20px;
+}
+
+.blue {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #418ee7;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.cart-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 4rem;
+}
+
+.cart-icon a {
+    color: black;
+    text-decoration: none;
+}
+
+.cart-icon a:hover {
+    color: red;
+}
+
+.logo {
+    height: 60px;
+}
+
+.nav__search input[type="text"] {
+    border: none;
+    outline: none;
+    width: 70%;
+    padding: 10px;
+    font-size: 14px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+.nav__links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+.nav__link {
+    text-decoration: none;
+    color: white;
+    margin: 0 20px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.nav__link:hover {
+    text-decoration: underline;
+}
+
+.nav__link--primary {
+    background-color: #ff9000;
+    color: white;
+    border-radius: 4px;
+    padding: 10px 20px;
+}
+
+
+/* Table Styles */
+
+#carTable {
+    border-collapse: collapse;
+    margin: 0 auto;
+    width: 100%;
+    margin-top: 30px;
+}
+
+#carTable th,
+#carTable td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+#carTable th {
+    background-color: #f2f2f2;
+    font-size: 18px;
+}
+
+.car-img {
+    max-width: 150px;
+    height: auto;
+    border-radius: 4px;
+}
+
+#carTable tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#carTable tbody tr:hover {
+    background-color: #cccccc;
+    /* 表格行在鼠标悬停时的颜色 */
+}
+
+button {
+    background-color: #ff9000;
+    color: white;
+    border-radius: 4px;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #e68a00;
+}
+
+.footer {
+    font-size: 1.5rem;
+    color: var(--black);
+    padding: 1rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--orange);
+}
+
+
+/* styles for screens smaller than 768px wide */
+
+@media screen and (max-width: 767px) {
+    /* adjust table font size and cell padding */
+    table {
+        font-size: 0.8em;
+    }
+    td,
+    th {
+        padding: 0.5em;
+    }
+    /* center align table cells */
+    td,
+    th {
+        text-align: center;
+    }
+    /* display table rows as blocks */
+    tr {
+        display: block;
+        margin-bottom: 1em;
+        border: 1px solid #ccc;
+        padding: 0.5em;
+    }
+    /* hide table header row */
+    thead {
+        display: none;
+    }
+    /* add margin to image */
+    .car-img {
+        margin-bottom: 1em;
+    }
+}
+
+
+/* styles for screens larger than 768px wide */
+
+@media screen and (min-width: 768px) {
+    /* adjust table font size and cell padding */
+    table {
+        font-size: 1em;
+    }
+    td,
+    th {
+        padding: 1em;
+    }
+    /* display table rows as table rows */
+    tr {
+        display: table-row;
+        margin-bottom: 0;
+        border: none;
+        padding: 0;
+    }
+    /* show table header row */
+    thead {
+        display: table-header-group;
+    }
+    /* reset image margin */
+    .car-img {
+        margin-bottom: 0;
+    }
+}
+
+
+/* styles for screens larger than 1024px wide */
+
+@media screen and (min-width: 1024px) {
+    /* adjust table font size and cell padding */
+    table {
+        font-size: 1.2em;
+    }
+    td,
+    th {
+        padding: 1.5em;
+    }
+}
+
+
+/* Style for the contact form */
+
+#contact {
+    background-color: #f2f2f2;
+    padding: 50px 0;
+}
+
+.contact__container {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact__container h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.form__group {
+    margin-bottom: 20px;
+}
+
+.form__group label {
+    display: block;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.form__group input,
+.form__group textarea {
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+}
+
+.form__group input:focus,
+.form__group textarea:focus {
+    outline: none;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+.form__group button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.form__group button:hover {
+    background-color: #3e8e41;
+}
+
+@media screen and (max-width: 768px) {
+    .contact__container h2 {
+        font-size: 28px;
+    }
+    .form__group label {
+        font-size: 20px;
+    }
+    .form__group input,
+    .form__group textarea {
+        padding: 8px;
+    }
+    .form__group button {
+        font-size: 20px;
+        padding: 8px 16px;
+    }
+}
+
+.car-thumbnail {
+    width: 200px;
+    height: auto;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 270px;
+}
+
+.details {
+    display: block;
+    margin: 20px auto;
+    max-width: 600px;
+    /* optional, adjust to your preference */
+}
+
+
+/* Center the table */
+
+table {
+    margin: 0 auto;
+}
+
+.actions {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-right: 100px;
+    align-items: center;
+    margin-top: 10px;
+}
+
+#checkoutForm {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: var(--box-shadow);
+}
+
+#checkoutForm label {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+#checkoutForm input[type="text"],
+#checkoutForm input[type="email"],
+#checkoutForm select {
+    width: 100%;
+    padding: 10px;
+    border: var(--border);
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+#checkoutForm input[type="submit"] {
+    background-color: var(--orange);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+#checkoutForm input[type="submit"]:hover {
+    background-color: #e68a00;
+}
+
+#checkoutForm span#totalPrice {
+    font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+    #checkoutForm {
+        padding: 10px;
+    }
+    #checkoutForm input[type="text"],
+    #checkoutForm input[type="email"],
+    #checkoutForm select {
+        font-size: 14px;
+        padding: 8px;
+    }
+    #checkoutForm input[type="submit"] {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+}
+
+.payment {
+    margin-bottom: 20px;
+}
+
+.actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.checkout-buttons button {
+    background-color: #418ee7;
+    color: white;
+    border-radius: 4px;
+    border: none;
+    padding: 10px 20px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.checkout-buttons button:hover {
+    background-color: #1ca4d6;
+}
+
+.checkout-buttons input[type="submit"] {
+    background-color: #418ee7;
+    color: white;
+    border-radius: 4px;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.checkout-buttons input[type="submit"]:hover {
+    background-color: #e68a00;
+}
+
+.success-message {
+    display: none;
+    background-color: #e6f7ed;
+    border: 1px solid #9ae6b4;
+    color: #1b5e20;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 4px;
+}
+
+.action {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 20px;
+    margin-right: 300px;
+}
+
+.action p {
+    margin-right: 10px;
+}
+
+#suggestions {
+    position: absolute;
+    border: 1px solid #aaa;
+    border-top: none;
+    z-index: 1000;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: white;
+}
+
+#suggestions {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #666;
+    border: 1px solid #ccc;
+    border-top: none;
+    box-shadow: var(--box-shadow);
+    z-index: 1000;
+    margin-top: 10px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.search-container {
+    position: relative;
+    display: inline-block;
+    margin-right: 20px;
+    width: fit-content;
+}
+
+.floating-btn {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 100;
+    background-color: #007bff;
+    color: #333333;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.category-menu {
+    position: absolute;
+    left: 264px;
+    top: 61px;
+    z-index: 99;
+    background-color: #333333;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 5px 0;
+}
+
+.category-item {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.category-item:hover {
+    background-color: #007bff;
+    color: rgb(32, 20, 20);
+}
+
+.form-check {
+    display: flex;
+    align-items: center;
+}
+
+.form-check input[type="checkbox"] {
+    margin-right: 0.5em;
+}
